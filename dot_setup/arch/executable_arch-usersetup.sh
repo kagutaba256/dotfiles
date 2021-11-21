@@ -4,16 +4,19 @@
 cd ~
 mkdir dl dox serv vpn
 
-sudo pacman -S base-devel git 
+sudo pacman -S base-devel git --noconfirm
 
 # yay
 cd ~/dl
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 
 # install base stuff
-yay -S htop vim neovim zsh tmux bpytop chezmoi --noconfirm
+yay -S htop vim neovim zsh tmux openssh bpytop chezmoi --noconfirm
+
+# change shell to zsh
+chsh -s $(which zsh)
 
 # ssh-keygen
 ssh-keygen
