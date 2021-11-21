@@ -1,0 +1,53 @@
+" sam's vimrc. cleaned 1/18/20 
+
+call plug#begin('~/.vim/plugged')
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'takac/vim-hardtime'
+  Plug 'google/vim-maktaba'
+  Plug 'google/vim-codefmt'
+  Plug 'google/vim-glaive'
+  Plug 'pangloss/vim-javascript'
+  Plug 'mattn/emmet-vim'
+  Plug 'preservim/nerdtree'
+  Plug 'kaicataldo/material.vim'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'ap/vim-css-color'
+
+  " Themes
+  Plug 'morhetz/gruvbox'
+call plug#end()
+
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
+let g:airline_theme='base16_gruvbox_dark_hard'
+
+"let g:hardtime_default_on = 1
+
+set laststatus=2
+set nocompatible
+syntax on
+set backspace=indent,eol,start
+set number
+set tabstop=2
+set softtabstop=2
+set expandtab
+set showcmd
+filetype indent on
+set wildmenu
+set lazyredraw
+set showmatch
+set hlsearch
+set incsearch
+highlight LineNr ctermfg=grey
+highlight CursorLineNr ctermfg=red
+highlight VertSplit ctermfg=black
+filetype plugin indent on
+set smartindent
+set shiftwidth=2
+set expandtab
+set number relativenumber
+set encoding=utf-8
+set wildmode=longest,list,full
+set fillchars+=vert:│

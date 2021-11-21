@@ -1,0 +1,59 @@
+#!/bin/bash
+
+setxkbmap -option caps:escape
+
+bspc rule -r "*"
+
+killall polybar
+killall picom
+killall sxhkd 
+killall clipmenud 
+killall openrazer-daemon 
+
+sxhkd &
+clipmenud &
+openrazer-daemon &
+
+xset r rate 350 60
+setxkbmap -option caps:escape
+
+/bin/sh ~/.screenlayout/SCREENS.sh
+/bin/sh ~/.scripts/set_background.sh
+
+bspc monitor DP-1 -d 1 2 3 4 5 6 7 8 9
+bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9
+bspc monitor DP-2 -d 1 2 3 4 5 6 7 8 9
+bspc monitor DP-4 -d 1 2 3 4 5 6 7 8 9
+
+bspc rule -a \* state=floating floating=on
+
+bspc config automatic_scheme alternate
+bspc config initial_polarity second_child
+bspc config pointer_modifier super
+bspc config pointer action1 move
+bspc config pointer action2 resize_side
+bspc config pointer action3 resize_corner
+#bspc config pointer_follows_monitor true
+#bspc config pointer_follows_focus true; \
+  #bspc nnode -f  "$direction"; \
+  #bspc config pointer_follows_focus false
+bspc config focus_follows_pointer true
+bspc config history_aware_focus true
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+
+bspc config top_padding 0
+bspc config bottom_padding 0
+bspc config left_padding 0
+bspc config right_padding 0
+bspc config border_width 0
+bspc config window_gap 10
+bspc config split_ratio 0.58
+
+picom &
+#/bin/sh ~/.scripts/start_polybar.sh
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi

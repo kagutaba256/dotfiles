@@ -1,0 +1,15 @@
+configuration {
+  modi: "combi,windowcd,run,drun";
+  lines: 10;
+  columns: 2;
+  show-icons: true;
+  theme: "gruvbox-dark-hard";
+  kb-accept-entry: "Control+m,Return,KP_Enter";
+  kb-remove-to-eol: "";
+  kb-row-up: "Control+k";
+  kb-row-down: "Control+j";
+}
+
+element-icon {
+  size:4.0ch;
+}

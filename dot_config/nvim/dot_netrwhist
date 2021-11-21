@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/sam/.doom.d'
+let g:netrw_dirhist_7='/home/sam/.config/bspwm'
+let g:netrw_dirhist_6='/home/sam/.config'
+let g:netrw_dirhist_5='/home/sam/.config/picom'
+let g:netrw_dirhist_4='/home/sam/dox/school/winter2021/cs510076/proj/pokemon-deep-learning/showcase'
+let g:netrw_dirhist_3='/home/sam/dox/school/winter2021/cs510076/proj/pokemon-deep-learning/matches-rnn-c-2'
+let g:netrw_dirhist_2='/home/sam/.config/Code - Insiders/Crash Reports'
+let g:netrw_dirhist_1='/home/sam/.config/Code - Insiders'
+let g:netrw_dirhist_0='/home/sam/dox/ideas'
+let g:netrw_dirhist_9='/home/sam/.config/fontconfig'

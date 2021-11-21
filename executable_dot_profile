@@ -1,0 +1,39 @@
+#!/bin/bash
+
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.scripts:$PATH"
+export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="/opt/cuda/bin:$PATH"
+
+export TERM=xterm-256color
+#export VIMINIT="source ~/.config/vim/vimrc"
+export TERMINAL="kitty"
+export EDITOR="emacs"
+export BROWSER="google-chrome-stable"
+export MYVIMRC="$HOME/.config/nvim/init.vim"
+export XDG_CONFIG_HOME="$HOME/.config"
+export GTK_THEME="Adwaita:dark"
+export GOOGLE_APPLICATION_CREDENTIALS="/home/sam/.googleauth.json"
+export PAGER="most"
+export BAT_PAGER="less"
+export CM_LAUNCHER="rofi"
+export CM_SELECTIONS="clipboard"
+export CM_MAX_CLIPS=10
+export CM_OUTPUT_CLIP=1
+export TESSDATA_PREFIX="/usr/local/share/tessdata"
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+alias e="$EDITOR"
+alias ll="exa -hlg --icons"
+alias lt="exa -hlg --icons --tree --level=2 -a"
+alias nvim="nvim -u $HOME/.config/nvim/init.vim"
+alias tmux="tmux -u"
+alias emacs="emacs -nw"
+
+gsettings set org.gnome.desktop.interface gtk-theme "elementary Dark"
+gsettings set org.gnome.desktop.wm.preferences theme "elementary Dark"

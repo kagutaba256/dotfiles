@@ -1,0 +1,102 @@
+
+super + Return
+  kitty 
+
+super + p
+  rofi -show drun -eh 2 -padding 16
+
+super + shift + p
+  dmenu_run -sb "#545454" -fn 'Monospace-13'
+
+super + shift + {q,r}
+  bspc {quit,wm -r}
+
+super + shift + c
+  bspc node -c
+
+super + shift + {0-9}
+  D={0-9}; \
+  bspc node -d "$(bspc query -D -m | sed -n "$D p")"
+
+super + {h,j,k,l}
+  bspc node -f {west,south,north,east}
+
+super + shift + {h,j,k,l}
+  bspc node -s {west,south,north,east}
+
+super + {0-9}
+  D={0-9}; \
+  bspc desktop -f "$(bspc query -D -m | sed -n "$D p")"
+
+super + shift + d
+  bspc config window_gap {0,15}
+
+super + {Left,Down,Up,Right}
+  bspc node -v {-20 0,0 20,0 -20, 20 0}
+
+super + {_,shift + }f
+  bspc {desktop -l next, node -t ~fullscreen}
+  
+super + o
+  bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+  
+super + alt + l
+  i3lock -c 000000
+
+super + period
+  bspc monitor -f next
+
+super + comma
+  bspc monitor -f prev
+
+super + shift + period
+  bspc node -m next
+
+super + shift + comma
+  bspc node -m prev
+
+super + shift + semicolon
+  unipicker --command "rofi -dmenu" --copy > /dev/null
+
+super + semicolon
+  unipicker --symbols "/home/sam/.config/unipicker/mathy/symbols" --command "rofi -dmenu" --copy > /dev/null
+
+
+super + shift + s
+  /home/sam/.scripts/screenshot.sh
+
+super + XF86AudioMute
+  hueadm group 2 reset
+
+super + XF86AudioLowerVolume
+  hueadm group 2 white bri=115
+
+super + XF86AudioRaiseVolume
+  hueadm group 2 white bri=0
+  
+super + XF86Calculator
+  xrandr-invert-colors -s 3
+
+super + g
+  google-chrome-stable
+
+super + e
+  emacs 
+
+super + i
+  clipmenu
+
+XF86AudioMute
+  pulseaudio-ctl mute
+
+alt + Tab
+  rofi -show window
+
+super + m
+  pomodoro
+
+super + z
+  zopen
+
+super + shift + z
+  zopenall
