@@ -1,0 +1,13 @@
+#!/bin/sh
+
+source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+
+setxkbmap -option caps:escape
+xrdb ~/.Xresources
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
+xset r rate 350 60
+
+exec bspwm 2>~/.bspwm.err
+#exec startplasma-x11 2>~/.plasma.err
