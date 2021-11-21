@@ -1,5 +1,26 @@
 #! /bin/bash
 
+# update pacman
+pacman -Syu --noconfirm
+
+# absolute basic packages
+pacman -S base-devel git vi --noconfirm
+
+# add sam
+useradd sam
+mkdir /home/sam
+chown sam /home/sam
+echo "Add password for user sam"
+passwd sam
+usermod -aG wheel sam
+pacman -S sudo --noconfirm
+
+# login as sam
+echo "log in as user sam"
+su sam
+
+# make folders in home
+cd ~
 mkdir dl dox serv vpn
 
 sudo pacman -S base-devel git 
@@ -11,7 +32,7 @@ cd yay
 makepkg -si
 
 # install base stuff
-yay -S htop vim neovim zsh tmux bpytop chezmoi
+yay -S htop vim neovim zsh tmux bpytop chezmoi --noconfirm
 
 # ssh-keygen
 ssh-keygen
