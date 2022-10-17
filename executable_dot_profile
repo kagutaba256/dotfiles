@@ -27,13 +27,17 @@ export CM_MAX_CLIPS=10
 export CM_OUTPUT_CLIP=1
 export TESSDATA_PREFIX="/usr/local/share/tessdata"
 export _JAVA_AWT_WM_NONREPARENTING=1
+export CC="/usr/bin/clang"
+export CXX="/usr/bin/clang++"
 
 alias e="$EDITOR"
 alias ll="exa -hlg --icons"
+alias lf="exa -hlg --icons"
 alias lt="exa -hlg --icons --tree --level=2 -a"
+alias tw="taskwarrior-tui"
 alias nvim="nvim -u $HOME/.config/nvim/init.vim"
 alias tmux="tmux -u"
 alias emacs="emacs -nw"
 
-gsettings set org.gnome.desktop.interface gtk-theme "elementary Dark"
-gsettings set org.gnome.desktop.wm.preferences theme "elementary Dark"
+#gsettings set org.gnome.desktop.interface gtk-theme "elementary Dark"
+#gsettings set org.gnome.desktop.wm.preferences theme "elementary Dark"
