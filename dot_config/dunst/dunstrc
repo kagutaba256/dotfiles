@@ -85,7 +85,7 @@
     idle_threshold = 0
 
     ### Text ###
-    font = Monospace 13
+    font = Monospace 9
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -274,15 +274,15 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#161616"
-    foreground = "#ffffff"
+    background = "#ffffff"
+    foreground = "#000000"
     timeout = 2
     # Icon for notifications with low urgency, uncomment to enable
     icon = /home/sam/.config/dunst/normal.png
 
 [urgency_normal]
-    background = "#161616"
-    foreground = "#ffffff"
+    background = "#ffffff"
+    foreground = "#000000"
     timeout = 2
     # Icon for notifications with normal urgency, uncomment to enable
     icon = /home/sam/.config/dunst/normal.png
