@@ -50,7 +50,12 @@ local plugins = {
   {
     "christoomey/vim-tmux-navigator",
     lazy = false,
-  }
+  },
+
+  {
+    "MTDL9/vim-log-highlighting",
+    lazy = false,
+  },
 
   -- To make a plugin not be loaded
   -- {
