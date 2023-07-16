@@ -1,6 +1,6 @@
 
 super + Return
-  kitty 
+  alacritty
 
 super + p
   rofi -show drun -eh 2 -padding 16

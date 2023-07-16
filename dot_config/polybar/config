@@ -28,7 +28,7 @@ secondary = #ececec
 alert = #c90000
 
 [bar/swag]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:DP-4}
 width = 100%
 height = 27
 radius = 0
@@ -52,7 +52,7 @@ wm-restack = bspwm
 bottom = true
 
 [bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
+;monitor = ${env:MONITOR:DP-4}
 width = 100%
 height = 27
 ;offset-x = 1%

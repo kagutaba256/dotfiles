@@ -14,6 +14,8 @@ dunst &
 
 xset r rate 350 60
 setxkbmap -option caps:escape
+xinput --set-prop 'pointer:''Logitech USB Receiver' 'libinput Accel Profile Enabled' 0, 1
+xinput --set-prop 'pointer:''Logitech USB Receiver' 'libinput Accel Speed' 0
 
 /bin/sh ~/.screenlayout/SCREENS.sh
 
