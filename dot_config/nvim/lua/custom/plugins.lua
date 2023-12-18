@@ -57,6 +57,11 @@ local plugins = {
     lazy = false,
   },
 
+  {
+    "waycrate/swhkd-vim",
+    lazy = false,
+  }
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

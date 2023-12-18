@@ -11,7 +11,6 @@
 ;
 
 (package! pandoc-mode)
-(package! pyvenv)
 ;(package! math-delimiters)
 
 ;; To install a package directly from a remote git repo, you must specify a

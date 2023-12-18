@@ -416,6 +416,7 @@ colors:
 #    - F1-F24
 #    - Key0-Key9
 #
+#
 #    A full list with available key codes can be found here:
 #    https://docs.rs/glutin/*/glutin/event/enum.VirtualKeyCode.html#variants
 #
@@ -590,6 +591,8 @@ colors:
 # in the order they were defined in.
 key_bindings:
   - { key: V, mods: Control,    action: Paste          }
+  - { key: Equals,      mods: Alt, action: IncreaseFontSize }
+  - { key: Minus, mods: Alt, action: DecreaseFontSize }
   #- { key: Copy,                                 action: Copy           }
   #- { key: L,         mods: Control,             action: ClearLogNotice }
   #- { key: L,         mods: Control, mode: ~Vi,  chars: "\x0c"          }
