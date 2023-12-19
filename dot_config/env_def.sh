@@ -1,6 +1,6 @@
 export PATH="$HOME/.local/bin:$PATH"
 
-export TERM=xterm-256color
+
 export TERMINAL="alacritty"
 export EDITOR="cursor"
 export PAGER="most"
@@ -22,3 +22,4 @@ export CPPFLAGS="-I/opt/homebrew/opt/zlib/include"
 export set runlogs="run_logs/$(date +'%Y_%m_%d')"
 
 export OPENAI_API="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"
+export OPENAI_API_KEY="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"

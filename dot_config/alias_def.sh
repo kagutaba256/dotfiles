@@ -6,6 +6,7 @@ alias lf="exa -ha --icons"
 alias lt="exa -h1a --icons --tree --level=2"
 alias llt="exa -hlg --icons --tree --level=2 -a"
 alias sp="source ~/.profile && echo 'Profile Sourced'"
+alias ka="killall"
 
 #alias nvim="nvim -u $HOME/.config/nvim/init.vim"
 alias tmux="tmux -u"
