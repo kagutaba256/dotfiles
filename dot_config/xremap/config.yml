@@ -1,0 +1,14 @@
+keymap:
+  - name: arrow keys
+    remap: 
+      C-h: left
+      C-j: down
+      C-k: up
+      C-l: right
+      Esc: KEY_GRAVE
+      KEY_CAPSLOCK: Esc
+      C-m: KEY_END
+      C-n: KEY_HOME
+      C-KEY_COMMA: KEY_PAGEDOWN
+      C-KEY_DOT: KEY_PAGEUP
+      C-Backspace: KEY_DELETE
