@@ -9,6 +9,8 @@ M.general = {
     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
     ["<C-z>"] = { "<cmd> undo<CR>", "undo" },
+    ["<C-r>"] = { "<cmd> redo<CR>", "undo" },
+    ["<leader>q"] = { "<cmd> w | bd<CR>", "close current tab" },
   },
 }
 
