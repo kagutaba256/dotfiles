@@ -1,7 +1,8 @@
 export PATH="$HOME/.local/bin:$PATH"
 
+export TERM="xterm-kitty"
 
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 export EDITOR="cursor"
 export PAGER="most"
 export BROWSER="google-chrome-beta"
