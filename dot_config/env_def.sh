@@ -3,7 +3,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export TERM="xterm-kitty"
 
 export TERMINAL="kitty"
-export EDITOR="cursor"
+export EDITOR="nvim"
 export PAGER="most"
 export BROWSER="google-chrome-beta"
 export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
