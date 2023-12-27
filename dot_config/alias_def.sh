@@ -1,12 +1,15 @@
 alias c="clear"
-alias u="unbuffer"
+alias uni='wl-copy $(unipicker)'
+alias u='unbuffer'
 alias f="open -a finder"
 alias ll="exa -hlga --icons"
 alias lf="exa -h1 --icons -s 'name'"
 alias lt="exa -h1a --icons --tree --level=2"
 alias llt="exa -hlg --icons --tree --level=2 -a"
-alias sp="source ~/.profile && echo 'Profile Sourced'"
+alias sp="source ~/.profile"
 alias ka="killall"
+alias lg="lazygit"
+alias syu='yay -Syu --noconfirm'
 
 #alias nvim="nvim -u $HOME/.config/nvim/init.vim"
 alias tmux="tmux -u"

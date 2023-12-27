@@ -1,6 +1,6 @@
-export PATH="$HOME/.local/bin:$PATH"
 
-export TERM="xterm-kitty"
+
+export TERM="xterm-256color"
 
 export TERMINAL="kitty"
 export EDITOR="nvim"
@@ -11,6 +11,7 @@ export FZF_PREVIEW_COMMAND="bat --style=numbers,changes --wrap never --color alw
 export FZF_CTRL_T_OPTS="--min-height 30 --preview-window down:60% --preview-window noborder --preview '($FZF_PREVIEW_COMMAND) 2> /dev/null'"
 export XDG_CONFIG_HOME="$HOME/.config"
 export GOOGLE_APPLICATION_CREDENTIALS="/home/sam/.googleauth.json"
+export GTK_THEME=Adawaita:dark
 
 # =====================
 
@@ -22,7 +23,7 @@ export CPPFLAGS="-I/opt/homebrew/opt/zlib/include"
 
 export set runlogs="run_logs/$(date +'%Y_%m_%d')"
 
-export OPENAI_API="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"
-export OPENAI_API_KEY="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"
+export OPENAI_API="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"
+export OPENAI_API_KEY="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"
 
 export T_REPOS_DIR="~/dox"
