@@ -11,7 +11,11 @@ export FZF_PREVIEW_COMMAND="bat --style=numbers,changes --wrap never --color alw
 export FZF_CTRL_T_OPTS="--min-height 30 --preview-window down:60% --preview-window noborder --preview '($FZF_PREVIEW_COMMAND) 2> /dev/null'"
 export XDG_CONFIG_HOME="$HOME/.config"
 export GOOGLE_APPLICATION_CREDENTIALS="/home/sam/.googleauth.json"
-export GTK_THEME=Adawaita:dark
+export GTK_THEME=Adwaita:dark
+export GTK2_RC_FILES="/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc"
+export QT_STYLE_OVERRIDE=adwaita-dark
+
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 # =====================
 
@@ -23,7 +27,7 @@ export CPPFLAGS="-I/opt/homebrew/opt/zlib/include"
 
 export set runlogs="run_logs/$(date +'%Y_%m_%d')"
 
-export OPENAI_API="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"
-export OPENAI_API_KEY="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"
+export OPENAI_API="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"
+export OPENAI_API_KEY="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"
 
 export T_REPOS_DIR="~/dox"

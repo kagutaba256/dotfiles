@@ -3,7 +3,7 @@ local M = {}
 
 M.general = {
     n = {
-        [";"] = { ":", "enter command mode", opts = { nowait = true } },
+        -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
         ["<C-z>"] = { vim.cmd.undo, "undo" },
         -- ["J"] = { "mzJ`z", "combine below line and keep cursor" },
         ["n"] = { "nzzzv", "search forwards" },
@@ -20,6 +20,9 @@ M.general = {
         ['<leader>lrr'] = {vim.lsp.buf.references, "LSP references"},
         ['<leader>lrn'] = {vim.lsp.buf.rename, "LSP rename"},
         ['<leader>='] = {vim.cmd.ConformFormat, "Format File with Conform"},
+        -- ['<leader>fn'] = {vim.fn.feedkeys("S", "n"), "Leap"},
+        ['up'] = {vim.cmd.next, "go to next thing"},
+        ['down'] = {vim.cmd.prev, "go to prev thing"},
     },
     i = {
         ["<C-g>"] = {vim.lsp.buf.signature_help},

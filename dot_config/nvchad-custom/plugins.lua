@@ -53,11 +53,20 @@ local plugins = {
         lazy = false,
     },
 
+    -- {
+    --     'ggandor/leap.nvim',
+    --     lazy = false,
+    -- },
+
     {
-        'ggandor/leap.nvim',
+        "mg979/vim-visual-multi",
+        lazy = false,
+    },
+
+    {
+        "justinmk/vim-sneak",
         lazy = false,
     }
-
 
     -- To make a plugin not be loaded
     -- {
