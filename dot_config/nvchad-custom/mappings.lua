@@ -21,8 +21,8 @@ M.general = {
         ['<leader>lrn'] = {vim.lsp.buf.rename, "LSP rename"},
         ['<leader>='] = {vim.cmd.ConformFormat, "Format File with Conform"},
         -- ['<leader>fn'] = {vim.fn.feedkeys("S", "n"), "Leap"},
-        ['up'] = {vim.cmd.next, "go to next thing"},
-        ['down'] = {vim.cmd.prev, "go to prev thing"},
+        -- ['<up>'] = {vim.lsp.buf.next, "go to next thing"},
+        -- ['<down>'] = {vim.lsp.buf.prev, "go to prev thing"},
     },
     i = {
         ["<C-g>"] = {vim.lsp.buf.signature_help},

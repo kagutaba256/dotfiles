@@ -12,7 +12,8 @@ M.treesitter = {
         "c",
         "markdown",
         "markdown_inline",
-        "python"
+        "python",
+        "rust"
     },
     indent = {
         enable = true,
@@ -39,8 +40,12 @@ M.mason = {
         "clangd",
         "clang-format",
 
+        -- python stuff
         "pyright",
         "black",
+
+        -- rust stuff
+        "rust-analyzer"
     },
 }
 
@@ -64,6 +69,7 @@ M.conform = {
     formatters_by_ft = {
         python = { "isort", "black" },
         javascript = { "prettierd", "prettier" },
+        rust = { "rustfmt" }
     }
 }
 
