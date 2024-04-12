@@ -17,14 +17,15 @@ M.add = {
 }
 
 M.add = {
-  Normal = { bg = "#000000", fg = "#ffffff" },
-  NormalNC = { bg = "#000000", fg = "#ffffff" },
-  VertSplit = { bg = "#000000", fg = "#ffffff" },
-  StatusLine = { bg = "#000000", fg = "#ffffff" },
-  StatusLineNC = { bg = "#000000", fg = "#ffffff" },
+  Normal = { bg = "NONE", fg = "#ffffff", ctermbg = 0},
+  NormalNC = { bg = "NONE", fg = "#ffffff" },
+  VertSplit = { bg = "NONE", fg = "#ffffff" },
+  StatusLine = { bg = "NONE", fg = "#ffffff" },
+  StatusLineNC = { bg = "NONE", fg = "#ffffff" },
   LineNr = { fg = "#ffffff"},
   CursorLineNr = { fg = "#FFFFFF" },
   SignColumn = { fg = "#FFFFFF" },
 }
+
 
 return M

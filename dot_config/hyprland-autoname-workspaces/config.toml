@@ -1,0 +1,142 @@
+version = "1.1.13"
+
+[class]
+chromium = ""
+sandboxed-tor-browser = ""
+chrome-faolnafnngnfdaknnbpnkhgohbobgegn-default = ""
+taskwarrior-tui = ""
+nemo = ""
+burp-startburp = ""
+"(?i)kitty" = ""
+duolingo = ""
+qalculate-gtk = ""
+kicad = ""
+plexamp = ""
+gsimplecalc = ""
+xplr = ""
+org-qutebrowser-qutebrowser = ""
+code-oss = ""
+dmenu-browser = ""
+discord = ""
+"(?i)waydroid.*" = "droid"
+"dmenu-pass generator" = ""
+molotov = ""
+qutepreview = ""
+telegramdesktop = ""
+vlc = ""
+kak = ""
+libreoffice-calc = ""
+vncviewer = ""
+work = ""
+shopping = ""
+pavucontrol = ""
+zoom = ""
+libreoffice-writer = ""
+steam = ""
+wlfreerdp = "󰀄"
+dmenu-clipboard = ""
+"(?i)firefox" = "<span color='orange'> </span>"
+dmenu-pass = ""
+krita = ""
+swappy = ""
+neomutt = ""
+org-telegram-desktop = ""
+scli = ""
+streamlink-twitch-gui = ""
+spotify = ""
+snappergui = ""
+songrec = ""
+remote-viewer = ""
+calibre-gui = ""
+slack = ""
+libreoffice-startcenter = ""
+cssh = ""
+whatsapp-desktop = ""
+personal = ""
+wire = "󰁀"
+org-ksnip-ksnip = ""
+"(?i)alacritty" = ""
+fontforge = ""
+dmenu-emoji = ""
+mpv = ""
+".*transmission.*" = ""
+wireshark-gtk = ""
+nm-connection-editor = ""
+DEFAULT = ""
+udiskie = ""
+org-pwmt-zathura = ""
+sun-awt-x11-xframepeer = ""
+whatsapp-nativefier-d52542 = ""
+paperwork = ""
+gcr-prompter = ""
+obsidian = ""
+libreoffice-impress = ""
+virt-manager = ""
+wayvnc = "󰀄"
+rapid-photo-downloader = ""
+"Gimp-2.10" = ""
+bleachbit = ""
+jetbrains-studio = ""
+vimiv = ""
+darktable = ""
+element = ""
+Signal = ""
+
+[class_active]
+DEFAULT = "{icon}"
+"(?i)firefox" = "<span color='orange'> {class}</span>"
+
+[initial_class]
+
+[initial_class_active]
+
+[workspaces_name]
+7 = "seven"
+1 = "one"
+5 = "five"
+6 = "six"
+9 = "nine"
+10 = "ten"
+0 = "zero"
+4 = "four"
+8 = "eight"
+3 = "three"
+2 = "two"
+
+[title_in_class."(?i)foot"]
+"emerge: (.+?/.+?)-.*" = "{match1}"
+
+[title_in_class."(firefox|chrom.*)"]
+"(?i)youtube" = "ꟳ"
+"(?i)twitch" = "ꟳ"
+
+[title_in_class_active]
+
+[title_in_initial_class]
+
+[title_in_initial_class_active]
+
+[initial_title_in_class.kitty]
+zsh = "Zsh"
+
+[initial_title_in_class_active]
+
+[initial_title_in_initial_class]
+
+[initial_title_in_initial_class_active]
+
+[exclude]
+"" = "^$"
+
+[format]
+dedup = true
+dedup_inactive_fullscreen = false
+delim = " "
+workspace = "<b><span color='red'>{id}-{name}:</span></b>{delim}{clients}"
+workspace_empty = "<b><span color='yellow'>{id}-{name}:</span></b>{delim}{clients}"
+client = "{icon}{delim}"
+client_fullscreen = "[{icon}]{delim}"
+client_active = "<span color='red'>{icon}</span>"
+client_dup = "{icon}{counter_sup}{delim}"
+client_dup_active = "*{icon}*{delim}{icon}{counter_unfocused_sup}"
+client_dup_fullscreen = "[{icon}]{delim}{icon}{counter_unfocused_sup}"

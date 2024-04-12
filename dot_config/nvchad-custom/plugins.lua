@@ -66,6 +66,16 @@ local plugins = {
     {
         "justinmk/vim-sneak",
         lazy = false,
+    },
+
+    {
+        "catppuccin/nvim",
+        lazy = false
+    },
+
+    {
+        "elkowar/yuck.vim",
+        lazy = false
     }
 
     -- To make a plugin not be loaded

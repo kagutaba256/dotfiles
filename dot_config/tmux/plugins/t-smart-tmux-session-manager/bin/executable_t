@@ -87,7 +87,15 @@ get_fzf_find_binding() {
 FIND_BIND=$(get_fzf_find_binding)
 
 get_sessions_by_mru() {
-	tmux list-sessions -F '#{session_last_attached} #{session_name}' | sort --numeric-sort --reverse | awk '{print $2}'
+	if [ "$T_RUNTYPE" == "attached" ]; then
+		CURRENT_SID=$(tmux display-message -p "#{session_id}")
+	else
+		CURRENT_SID=""
+	fi
+	tmux list-sessions \
+		-f "#{!=:#{session_id},$CURRENT_SID}" \
+		-F '#{session_last_attached} #{session_name}' \
+		| sort --numeric-sort --reverse | awk '{print $2}; END {print "———"}'
 }
 
 get_zoxide_results() {
@@ -123,23 +131,23 @@ TAB_BIND="tab:down,btab:up"
 
 if [ $# -ge 1 ]; then # argument provided
 	if [ "$1" = "-r" ] || [ "$1" == "--repo" ]; then
+		if [[ -z $T_REPOS_DIR ]]; then
+			echo "T_REPOS_DIR has not been set"
+			exit 1
+		fi
+
 		if [ -z "$2" ]; then
 			echo "No repository url provided -r {url}"
 			exit 1
 		fi
+
 		REPO_URL=$2
-		if [[ $REPO_URL =~ \/([^\/]+)\.git$ ]]; then
-			REPO="${BASH_REMATCH[1]}"
-			if [[ -z $T_REPOS_DIR ]]; then
-				echo "T_REPOS_DIR has not been set"
-				exit 1
-			fi
-			cd $T_REPOS_DIR
-			git clone $REPO_URL
-			RESULT="$T_REPOS_DIR/$REPO"
+		cd $T_REPOS_DIR
+
+		if git clone --recursive $REPO_URL; then
+			RESULT="$T_REPOS_DIR/$(basename "$_" .git)"
 		else
-			echo "Invalid GitHub repository URL"
-			exit 1
+			exit $? # exit code from last command
 		fi
 
 	else # not -r or --repo
@@ -227,6 +235,15 @@ elif [[ $T_SESSION_USE_GIT_ROOT == 'true' ]]; then
 	else # is in git repository
 		BASENAME=$(basename $GIT_ROOT)
 		RELATIVE_PATH=${RESULT#$GIT_ROOT}
+
+		# git worktree
+		GIT_WORKTREE_ROOT=$(git -C $RESULT rev-parse --git-common-dir 2>/dev/null) && echo $GIT_WORKTREE_ROOT >/dev/null
+		if [[ $? -eq 0 ]] && [[ ! $GIT_WORKTREE_ROOT =~ ^(\.\./)*\.git$ ]]; then # is inside git worktree
+			GIT_WORKTREE_ROOT=$(echo $GIT_WORKTREE_ROOT | sed -E 's/(\/.git|\/.bare)$//') # remove .git or .bare suffix
+			BASENAME=$(basename $GIT_WORKTREE_ROOT)
+			RELATIVE_PATH=${RESULT#$GIT_WORKTREE_ROOT}
+		fi
+
 		SEPARATOR="/"
 		FORMATTED_PATH="${RELATIVE_PATH//\//$SEPARATOR}"
 		SESSION_NAME=$(echo $BASENAME$FORMATTED_PATH | tr ' .:' '_')

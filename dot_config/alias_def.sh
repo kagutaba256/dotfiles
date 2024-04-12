@@ -3,7 +3,6 @@ alias uni='wl-copy $(unipicker)'
 alias u='unbuffer'
 alias f="open -a finder"
 alias ll="exa -hlga --icons"
-alias lf="exa -h1 --icons -s 'name'"
 alias lt="exa -h1a --icons --tree --level=2"
 alias llt="exa -hlg --icons --tree --level=2 -a"
 alias sp="source ~/.profile"
@@ -19,6 +18,7 @@ alias tmux="tmux -u"
 alias ack="echo 'use rg'"
 alias ag="echo 'use rg'"
 alias bat="bat --color always"
+alias clock="tty-clock -sc"
 
 # =================================================
 

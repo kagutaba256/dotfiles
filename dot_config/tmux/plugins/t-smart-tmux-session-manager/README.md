@@ -1,8 +1,4 @@
-<a href="https://www.joshmedeski.com/posts/smart-tmux-sessions-with-zoxide-and-fzf/" target="_blank">
-
-![thumbnail](https://github.com/joshmedeski/t-smart-tmux-session-manager/blob/main/smart-tmux-sessions-with-zoxide-and-fzf.jpeg?raw=true)
-
-</a>
+**Annoucement 🎉📣** I've rewriten this project in Go and called it "sesh", go [check it out!](https://github.com/joshmedeski/sesh)
 
 # t - the smart tmux session manager
 
@@ -15,7 +11,11 @@ tmux is a powerful tool, but dealing with sessions can be painful. This script m
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [fzf](https://github.com/junegunn/fzf) (>=0.35.0)
 
-```
+_Note: some users have had issues with fzf integration on tmux 3.2a where upon
+spawning fzf it would lock the tmux pane. Upgrading to 3.3a seems to be a viable
+workaround_ Check [#104](https://github.com/joshmedeski/t-smart-tmux-session-manager/issues/104)
+
+```sh
 brew install tmux zoxide fzf
 ```
 
@@ -141,7 +141,7 @@ If you are not in tmux, you can simply run `t` to start the interactive script, 
 
 You can quickly clone a repository to your preferred directory by using the `t` command combined with the `-r` flag (or `--repo`).
 
-First, you have to set the `T_REPO_DIR` variable in your shell environment. Make sure to set it where you want your repositories cloned.
+First, you have to set the `T_REPOS_DIR` variable in your shell environment. Make sure to set it where you want your repositories cloned.
 
 <details>
 <summary>bash</summary>
